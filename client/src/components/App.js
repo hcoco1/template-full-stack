@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./Home";
 import About from "./About";
 import NoMatch from "./NoMatch";
-import Navbar from "./Navbar";
+import Header from "./Header";
 
 
 
@@ -11,7 +11,7 @@ import Navbar from "./Navbar";
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
