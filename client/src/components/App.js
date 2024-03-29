@@ -1,8 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from "./Home";
+import About from "./About";
+import NoMatch from "./NoMatch";
+import Navbar from "./Navbar";
+
+
+
 
 function App() {
-  return <h1>Project Client</h1>;
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
